@@ -1,0 +1,25 @@
+use megaman;
+db.createCollection(“bosses”);
+
+db.bosses.insertMany([{“
+  name”: “Man”,
+  “weapon”: “Rolling Cutter”,
+  “weakness”: “Super Arm”
+ },
+ {“
+  name”: “Guts Man”,
+  “weapon”: “Super Arm”,
+  “weakness”: “Hyper Bomb”
+ },
+ {“
+  name”: “Fire Man”,
+  “weapon”: “Fire Wave”,
+  “weakness”: “Ice Slasher”
+ }
+]);
+
+POST ‘http://localhost:8080/bosses’
+PUT ‘http://localhost:8080/bosses/5aecef5b6d55754834124df3’
+GET ‘http://localhost:8080/bosses/5aecef5b6d55754834124df3’
+DELETE ‘http://localhost:8080/bosses/5aecef5b6d55754834124df3’
+GET ‘http://localhost:8080/bosses’
